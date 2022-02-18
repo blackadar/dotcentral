@@ -5,14 +5,14 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin main;
 
 function doIt() {
-	rsync --exclude ".git/" \
+	rsync -avh --no-perms \
+		--exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
-		--exclude "shell-yeah.sh"
+		--exclude "shell-yeah.sh" \
 		--exclude "README.md" \
-		-avh --no-perms . ~;
-	source ~/.bash_profile;
+		. ~;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
