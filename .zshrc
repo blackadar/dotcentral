@@ -114,5 +114,12 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Load alias dotfile
-source $HOME/.aliases
+# Find and Load Other Dotfiles
+
+if [ -e $HOME/.bash_functions ]; then
+    source $HOME/.bash_functions
+fi
+
+if [ -e $HOME/.aliases ]; then
+    source $HOME/.aliases
+fi

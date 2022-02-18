@@ -116,26 +116,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Custom User Variables
+# Find and Load Other Dotfiles
+if [ -e $HOME/.bash_functions ]; then
+    source $HOME/.bash_functions
+fi
 
-alias ckcta='ssh -t jordan@ckct0a'
-alias ckctb='ssh -t jordan@ckct0b'
-alias ckctd='ssh -t jordan@ckct0d'
-alias ckctc='ssh -t jordan@ckct0c'
-alias ckcte='ssh -t iris@ckct0e'
-
-alias zebra1='ssh iris@zebra01'
-alias zebra2='ssh iris@zebra02'
-alias zebra3='ssh iris@zebra03'
-alias zebra4='ssh iris@zebra04'
-alias zebra5='ssh iris@zebra05'
-alias zebra6='ssh iris@zebra06'
-alias tn='telnet ckct0c 2020'
-alias update='sudo apt update && sudo apt upgrade --with-new-pkgs'
-alias pi='ssh pi@192.168.1.90'
-
-# Start at Login
-ps -C sshd >/dev/null || sudo /usr/sbin/sshd
-# eval "$(starship init bash)"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+if [ -e $HOME/.aliases ]; then
+    source $HOME/.aliases
+fi

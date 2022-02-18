@@ -1,7 +1,9 @@
 # Command Shortcuts
 # =================
 alias update="sudo apt update && sudo apt upgrade --with-new-pkgs"
-
+alias keygen="ssh-keygen -t rsa -b 4096"
+alias platform="lsb_release -a && uname -r && cat /etc/os-release"
+alias c="clear"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -19,6 +21,14 @@ alias lst="ls -lthraF ${colorflag}"
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
 
+# Sort by File-Size
+alias lt='ls --human-readable --size -1 -S --classify'
+
+# Grep Colors
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
@@ -35,9 +45,9 @@ alias eng="ssh jordan@192.168.1.85"
 alias ckcta="ssh jordan@ckct0a"
 alias ckctb="ssh jordan@ckct0b"
 alias ckctc="ssh jordan@ckct0c"
-alias ckcte="ssh jordan@ckct0e"
-alias ckctf="ssh jordan@ckct0f"
-alias ckctg="ssh jordan@ckct0g"
+alias ckcte="ssh iris@ckct0e"
+alias ckctf="ssh iris@ckct0f"
+alias ckctg="ssh iris@ckct0g"
 
 alias zebra1="ssh iris@zebra01"
 alias zebra2="ssh iris@zebra02"
