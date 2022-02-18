@@ -116,8 +116,8 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true
 
 # Find and Load Other Dotfiles
 
-if [ -e $HOME/.bash_functions ]; then
-    source $HOME/.bash_functions
+if [ -e $HOME/.functions ]; then
+    source $HOME/.functions
 fi
 
 if [ -e $HOME/.aliases ]; then
