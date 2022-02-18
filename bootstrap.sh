@@ -9,6 +9,7 @@ function doIt() {
 		--exclude ".DS_Store" \
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
+		--exclude "shell-yeah.sh"
 		--exclude "README.md" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
