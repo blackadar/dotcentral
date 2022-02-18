@@ -4,8 +4,8 @@ cd "$(dirname "${BASH_SOURCE}")";
 
 function doIt() {
 	sudo apt install -y zsh sl htop vim;
-	omzget="$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-	omzcommand="sh -c \"$omzget\""
+	omzget="(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+	omzcommand="sh -c \$\"$omzget\""
 	trap "$omzcommand" EXIT;
 	git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k;
 	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions;
