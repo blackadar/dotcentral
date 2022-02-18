@@ -35,6 +35,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# Git Interactions
+ga="git add -A"
+gu="git update"
 
 # SSH Destinations
 alias starlink="ssh jordan@137.184.29.204"
